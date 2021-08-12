@@ -1,0 +1,8 @@
+prefix=/home/hoangdung/ROS_project/industrial_robot_ws/install
+
+Name: kuka_robot
+Description: Description of kuka_robot
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

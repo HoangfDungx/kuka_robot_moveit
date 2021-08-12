@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="kuka_robot">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.042639 0.0012049 0.15892"
+        rpy="0 0 0" />
+      <mass
+        value="70.657" />
+      <inertia
+        ixx="1.738"
+        ixy="0.024319"
+        ixz="-0.06093"
+        iyy="2.1527"
+        iyz="-0.00047228"
+        izz="2.2041" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kuka_robot/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.2 0.2 0.2 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kuka_robot/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="link_1">
+    <inertial>
+      <origin
+        xyz="0.13958 0.049178 0.19428"
+        rpy="0 0 0" />
+      <mass
+        value="33.585" />
+      <inertia
+        ixx="0.57925"
+        ixy="0.0064705"
+        ixz="-0.22495"
+        iyy="0.81369"
+        iyz="0.0035931"
+        izz="0.63771" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kuka_robot/meshes/link_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kuka_robot/meshes/link_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_1"
+    type="continuous">
+    <origin
+      xyz="0 0 0.363"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="link_1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      effort="100"
+      velocity="5" />
+    <dynamics
+      damping="2"
+      friction="1" />
+  </joint>
+  <link
+    name="link_2">
+    <inertial>
+      <origin
+        xyz="0.30938 0.0043846 0.050481"
+        rpy="0 0 0" />
+      <mass
+        value="11.861" />
+      <inertia
+        ixx="0.055144"
+        ixy="-0.0067503"
+        ixz="-0.023505"
+        iyy="0.54626"
+        iyz="-0.00049287"
+        izz="0.54872" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kuka_robot/meshes/link_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.9098 0.44314 0.031373 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kuka_robot/meshes/link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_2"
+    type="revolute">
+    <origin
+      xyz="0.26 -0.115 0.282"
+      rpy="1.5708 -1.205 0" />
+    <parent
+      link="link_1" />
+    <child
+      link="link_2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.5"
+      upper="2.5"
+      effort="100"
+      velocity="5" />
+    <dynamics
+      damping="2"
+      friction="1" />
+  </joint>
+  <link
+    name="link_3">
+    <inertial>
+      <origin
+        xyz="-0.012724 -0.073133 -0.12639"
+        rpy="0 0 0" />
+      <mass
+        value="14.687" />
+      <inertia
+        ixx="0.4395"
+        ixy="-0.0096868"
+        ixz="-0.0033365"
+        iyy="0.06145"
+        iyz="-0.02184"
+        izz="0.44547" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kuka_robot/meshes/link_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kuka_robot/meshes/link_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_3"
+    type="revolute">
+    <origin
+      xyz="0.67993 0.0099989 -0.003"
+      rpy="0 0 0.029172" />
+    <parent
+      link="link_2" />
+    <child
+      link="link_3" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.85"
+      upper="4.1415"
+      effort="80"
+      velocity="7" />
+    <dynamics
+      damping="2"
+      friction="1" />
+  </joint>
+  <link
+    name="link_4">
+    <inertial>
+      <origin
+        xyz="-0.0083171 3.815E-05 0.11923"
+        rpy="0 0 0" />
+      <mass
+        value="2.6169" />
+      <inertia
+        ixx="0.0054032"
+        ixy="-5.8426E-06"
+        ixz="-3.2818E-05"
+        iyy="0.0059988"
+        iyz="-6.9645E-06"
+        izz="0.0049408" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kuka_robot/meshes/link_4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.9098 0.44314 0.031373 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kuka_robot/meshes/link_4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_4"
+    type="continuous">
+    <origin
+      xyz="-0.0225 -0.4765 -0.13"
+      rpy="1.5708 -1.5708 0" />
+    <parent
+      link="link_3" />
+    <child
+      link="link_4" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      effort="30"
+      velocity="10" />
+    <dynamics
+      damping="1"
+      friction="0.5" />
+  </joint>
+  <link
+    name="link_5">
+    <inertial>
+      <origin
+        xyz="0.052442 -4.3372E-07 -0.062534"
+        rpy="0 0 0" />
+      <mass
+        value="1.8559" />
+      <inertia
+        ixx="0.01226"
+        ixy="7.9782E-08"
+        ixz="-0.00090173"
+        iyy="0.016628"
+        iyz="2.3678E-07"
+        izz="0.0070619" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kuka_robot/meshes/link_5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.9098 0.44314 0.031373 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kuka_robot/meshes/link_5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_5"
+    type="revolute">
+    <origin
+      xyz="0.068 0 0.19"
+      rpy="3.1415 -1.5708 0" />
+    <parent
+      link="link_4" />
+    <child
+      link="link_5" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.5"
+      upper="2.5"
+      effort="30"
+      velocity="10" />
+    <dynamics
+      damping="1"
+      friction="0.5" />
+  </joint>
+  <link
+    name="link_6">
+    <inertial>
+      <origin
+        xyz="0.0047745 8.1697E-06 0.034789"
+        rpy="0 0 0" />
+      <mass
+        value="0.39979" />
+      <inertia
+        ixx="0.00085878"
+        ixy="-1.6637E-06"
+        ixz="2.3277E-05"
+        iyy="0.00064933"
+        iyz="-1.4489E-07"
+        izz="0.001134" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kuka_robot/meshes/link_6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.2 0.2 0.2 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kuka_robot/meshes/link_6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_6"
+    type="continuous">
+    <origin
+      xyz="0.158 0 -0.049"
+      rpy="1.5708 -1.5538 1.5708" />
+    <parent
+      link="link_5" />
+    <child
+      link="link_6" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      effort="30"
+      velocity="10" />
+    <dynamics
+      damping="1"
+      friction="0.5" />
+  </joint>
+</robot>

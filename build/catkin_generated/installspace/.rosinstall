@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/hoangdung/ROS_project/industrial_robot_ws/install/setup.sh
