@@ -131,7 +131,7 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/hoangdung/ROS_project/industrial_robot_ws/build/gtest/cmake_install.cmake")
-  include("/home/hoangdung/ROS_project/industrial_robot_ws/build/moveit_pkg/cmake_install.cmake")
+  include("/home/hoangdung/ROS_project/industrial_robot_ws/build/kuka_moveit/cmake_install.cmake")
   include("/home/hoangdung/ROS_project/industrial_robot_ws/build/kuka_robot/cmake_install.cmake")
 
 endif()

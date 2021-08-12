@@ -1,2 +1,2 @@
-kuka_robot:moveit_pkg
+kuka_moveit:kuka_robot
 -DCATKIN_DEVEL_PREFIX=/home/hoangdung/ROS_project/industrial_robot_ws/devel -DCMAKE_INSTALL_PREFIX=/home/hoangdung/ROS_project/industrial_robot_ws/install -G Unix Makefiles
